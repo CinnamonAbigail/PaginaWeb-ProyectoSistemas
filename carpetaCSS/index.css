@@ -111,26 +111,29 @@ body {
   font-weight: 850;
   border-bottom-color: #B04A32;
 }
-
-/*seccion inicio*/
+/* === SECCIÓN INICIO === */
 
 .seccion-principal,
 .seccion-contenido {
-  min-height: 500px;
+  min-height: 100vh; /* ocupa todo el alto de la pantalla */
 }
 
 .seccion-principal {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 70px 100px 80px;
+  padding: 0; /* quitamos padding para que la imagen ocupe toda la altura */
   flex-wrap: wrap;
-  gap: 40px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .contenido-texto {
   flex: 1;
-  max-width: 600px;
+  max-width: 35%;
+  padding: 80px 80px;
+  z-index: 2;
+  position: relative;
 }
 
 .contenido-texto h1 {
@@ -141,7 +144,6 @@ body {
   margin-bottom: 20px;
 }
 
-
 .contenido-texto h2 {
   font-family: 'avallon', sans-serif;
   font-size: 4.5rem;
@@ -151,16 +153,18 @@ body {
   margin-bottom: 25px;
 }
 
-#p1{
+#p1 {
   font-family: 'bold';
   color: #86654b;
   margin-bottom: 5px;
 }
-#p2{
+
+#p2 {
   font-family: 'thin';
   color: #86654b;
   margin-bottom: 60px;
 }
+
 .contenido-texto p {
   font-size: 1.3rem;
   color: #444;
@@ -186,23 +190,54 @@ body {
   background-color: #C99767;
 }
 
+/* === CONTENEDOR DE LA IMAGEN === */
+
 .contenido-imagen {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.imagen-ajustada {
+/* === CARRUSEL AUTOMÁTICO === */
+
+.carrusel {
   width: 100%;
   height: 100%;
-  max-width: none;
+  overflow: hidden;
   border-radius: 0;
-  object-fit: contain;
-  box-shadow: none;
+  position: relative;
 }
 
-/*ICONO*/
+.carrusel-imagenes {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.carrusel-imagenes img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* === DEGRADADO TRANSPARENTE IZQUIERDA === */
+
+.contenido-imagen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* === ICONOS DE CONTACTO === */
 .icono-contacto {
   display: flex;
   gap: 15px;
@@ -218,6 +253,32 @@ body {
 .icono-contacto a:hover {
   color: #C99767;
 }
+
+/* === RESPONSIVE === */
+
+@media (max-width: 992px) {
+  .seccion-principal {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contenido-texto {
+    max-width: 100%;
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  .contenido-imagen {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .contenido-imagen::before {
+    background: linear-gradient(to top, rgba(255,255,255,0.9), rgba(255,255,255,0));
+  }
+}
+
+
 
 /* bloque debajo de inicio */
 .bloque-resena {
@@ -273,35 +334,66 @@ body {
 }
 
 /* nosotros */
-#nosotros{
-  min-height: 600px;
-  
+.nosotros {
+  text-align: center;
+  padding: 50px 20px;
 }
 
-#h1Nosotros{
-  font-size: 3rem;
-  margin-top: 65px;
+.nosotros h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
 }
 
-#pNosotros{
-  font-family: 'thin';
-  color: #86654b;
-  font-size: 1rem;
-  text-align: justify;
-  margin-top: 45px;
-  width: 550px;
+.tarjetas-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  perspective: 1000px; /* efecto 3D */
 }
 
-#imgNosotros{
-  width: 700px;
-  height: 450px;
-  margin-right: 50px;
+.tarjeta {
+  width: 250px;
+  height: 150px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
 }
 
-#contenidoNosotros{
-  margin-right: 0;
+.tarjeta .front,
+.tarjeta .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  backface-visibility: hidden;
+  font-size: 1.2rem;
+  color: white;
 }
 
+/* Frente */
+.tarjeta .front {
+  background-color: #4a90e2;
+}
+
+/* Parte de atrás */
+.tarjeta .back {
+  background-color: #50e3c2;
+  transform: rotateY(180deg);
+}
+
+/* Giro al pasar el mouse */
+.tarjeta.izquierda:hover {
+  transform: rotateY(-180deg);
+}
+
+.tarjeta.derecha:hover {
+  transform: rotateY(180deg);
+}
 /* huella */
 #huella{
   min-height: 700px;
@@ -327,6 +419,7 @@ body {
   height: 650px;
   margin-left: 0;
 }
+
 
 /*segundo bloque */
 

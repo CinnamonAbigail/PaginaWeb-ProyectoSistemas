@@ -168,3 +168,19 @@ document.addEventListener('DOMContentLoaded', function () {
       modalTelefono.classList.remove('activo');
     });
   });
+
+
+// === CARRUSEL AUTOMÁTICO DE BIENVENIDA ===
+document.addEventListener("DOMContentLoaded", () => {
+  const carrusel = document.querySelector(".carrusel-imagenes");
+  const imagenes = document.querySelectorAll(".carrusel-imagenes img");
+  let indice = 0;
+
+  function cambiarImagen() {
+    indice = (indice + 1) % imagenes.length;
+    carrusel.style.transform = `translateX(-${indice * 100}%)`;
+  }
+
+  // Cambia cada 4 segundos
+  setInterval(cambiarImagen, 4000);
+});
