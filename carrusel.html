@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carrusel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+}
+
+.info {
+  flex: 1;
+  max-width: 300px;
+}
+
+.info h2 {
+  font-family: 'avallon', cursive;
+  color: #B04A32;
+}
+
+.imagenes {
+  display: flex;
+  gap: 1rem;
+}
+
+.imagenes img {
+  width: 180px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.controles {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.controles button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #B04A32;
+  cursor: pointer;
+}
+
+button {
+  background-color: #B04A32;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="carrusel-container">
+  <div class="info">
+    <h2 id="titulo">Guerra del Pacífico</h2>
+    <p id="descripcion">
+      Conflicto entre Bolivia, Perú y Chile por el control del litoral y recursos minerales. Bolivia perdió su salida al mar tras la derrota.
+    </p>
+    <p id="fecha">1879/02/19 – 1883/10/20</p>
+    <button>VER BATALLAS</button>
+    <button>VER TRATADOS</button>
+  </div>
+
+  <div class="imagenes">
+    <img id="img-principal" src="/img/f1b2cd83-31b4-40df-8be3-ab295b07eb29.jpg" alt="Guerra del Pacífico">
+    <img id="img-secundaria" src="/img/tercerafoto-removebg-preview.png" alt="Otra imagen de la guerra">
+  </div>
+
+  <div class="controles">
+    <button onclick="anterior()">‹</button>
+    <button onclick="siguiente()">›</button>
+  </div>
+</div>
+<script src="carrusel.js"></script>
+</body>
+</html>
