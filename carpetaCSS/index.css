@@ -99,7 +99,7 @@ body {
   font-size: 0.8rem;
   font-family: 'thin';
   font-weight: 800;
-  color:#B04A32 ;
+  color:#292ba8 ;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
   transition: color 0.3s ease, border-bottom-color 0.3s ease;
@@ -109,13 +109,14 @@ body {
 .navegacion-izquierda a:hover,
 .navegacion-derecha a:hover {
   font-weight: 850;
-  border-bottom-color: #B04A32;
+  border-bottom-color: #e37729;
 }
 /* === SECCIÓN INICIO === */
 
 .seccion-principal,
 .seccion-contenido {
   min-height: 100vh; /* ocupa todo el alto de la pantalla */
+  margin-top: 5px;
 }
 
 .seccion-principal {
@@ -130,7 +131,7 @@ body {
 
 .contenido-texto {
   flex: 1;
-  max-width: 35%;
+  max-width: 50%;
   padding: 80px 80px;
   z-index: 2;
   position: relative;
@@ -139,30 +140,38 @@ body {
 .contenido-texto h1 {
   font-family: 'ams', sans-serif;
   font-size: 3.5rem;
-  color: #B04A32;
+  color: #292ba8;
   font-weight: 500;
   margin-bottom: 20px;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .contenido-texto h2 {
   font-family: 'avallon', sans-serif;
   font-size: 4.5rem;
-  color: #B04A32;
+  color: #e37729;
   font-weight: 200;
   margin-left: 20px;
   margin-bottom: 25px;
+  text-align: center;
 }
 
 #p1 {
   font-family: 'bold';
-  color: #86654b;
+  color: #4d4fdc;
   margin-bottom: 5px;
+  text-align: center;
+  font-size: 1rem;
+
 }
 
 #p2 {
   font-family: 'thin';
-  color: #86654b;
+  color: #4d4fdc;
   margin-bottom: 60px;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .contenido-texto p {
@@ -172,28 +181,12 @@ body {
   margin-left: 10px;
 }
 
-.boton-comprar {
-  font-family: 'thin';
-  margin-left: 10px;
-  background-color: #B04A32;
-  color: white;
-  padding: 14px 50px;
-  border-radius: 42px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(176, 74, 50, 0.3);
-  transition: background-color 0.3s ease;
-}
 
-.boton-comprar:hover {
-  background-color: #C99767;
-}
 
 /* === CONTENEDOR DE LA IMAGEN === */
 
 .contenido-imagen {
-  width: 50%;
+  width: 55%;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -245,7 +238,7 @@ body {
 }
 
 .icono-contacto a {
-  color: #B04A32;
+  color: #e37729;
   font-size: 18px;
   transition: color 0.3s ease;
 }
@@ -282,7 +275,7 @@ body {
 
 /* bloque debajo de inicio */
 .bloque-resena {
-  background: linear-gradient(to right, #f73c24, #d7c63f, #47a92f);
+  background: linear-gradient(to right, #ff8d02,#8b8b8b,#384cc9);
   color: white;
   text-align: center;
   padding: 60px 20px;
@@ -341,7 +334,11 @@ body {
 
 .nosotros h2 {
   margin-bottom: 40px;
-  font-size: 2rem;
+
+  font-family: 'avallon', sans-serif;
+  font-size: 5.5rem;
+  color: #e37729;
+  font-weight: 200;
 }
 
 .tarjetas-container {
@@ -352,8 +349,8 @@ body {
 }
 
 .tarjeta {
-  width: 250px;
-  height: 150px;
+  width: 550px;
+  height: 350px;
   position: relative;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -377,13 +374,16 @@ body {
 
 /* Frente */
 .tarjeta .front {
-  background-color: #4a90e2;
+  background-image: url('/img/texturaAzul.jpg');
+  font-family: 'ams', sans-serif;
+  font-size: 3.5rem;
 }
 
 /* Parte de atrás */
 .tarjeta .back {
-  background-color: #50e3c2;
+  background-image: url('/img/texturaNaranja.jpg');
   transform: rotateY(180deg);
+  font-family: 'thin';
 }
 
 /* Giro al pasar el mouse */
