@@ -397,6 +397,100 @@ body {
 .tarjeta.derecha:hover {
   transform: rotateY(180deg);
 }
+
+/* ==== SECCIÓN PROGRAMAS (Bernabe / Escuela de Vida) ==== */
+
+.programas {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.programas h2 {
+  margin-bottom: 40px;
+  font-family: 'avallon', sans-serif;
+  font-size: 5.5rem;
+  color: #e37729;
+  font-weight: 200;
+}
+
+
+/* Bloque de cada programa */
+.bloque-programa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+/* Versión alternada (imagen a la derecha) */
+.bloque-programa.invertido {
+  flex-direction: row-reverse;
+}
+
+/* Columna de imagen */
+.columna-imagen img.imagen-programa {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Columna de texto */
+.columna-texto {
+  max-width: 500px;
+  text-align: left;
+}
+
+.columna-texto h3 {
+  font-size: 70px;
+  color: #e37729;
+  margin-bottom: 20px;
+  font-family: 'avallon', sans-serif;
+}
+
+.columna-texto p {
+  font-family: 'bold';
+  color: #292ba8; 
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+/* Botón "Ver más" */
+.btn-vermas {
+  display: inline-block;
+  background-color: #e37729;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'bold';
+  transition: background-color 0.3s ease;
+}
+
+.btn-vermas:hover {
+  background-color: #C99767;
+  color: #000;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 992px) {
+  .bloque-programa {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .columna-texto {
+    text-align: center;
+  }
+
+  .columna-imagen img.imagen-programa {
+    width: 90%;
+  }
+}
+
 /* huella */
 #huella{
   min-height: 700px;
@@ -588,10 +682,13 @@ body {
   }
   
   .container-contacto h2 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #B04A32;
-    font-family: 'ams', sans-serif;
+    font-family: 'avallon', sans-serif;
+    font-size: 4.5rem;
+    color: #e37729;
+    font-weight: 200;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    text-align: center;
   }
   
   .datos-contacto {
@@ -604,13 +701,18 @@ body {
   }
   
   .datos-contacto a {
-    color: #B04A32;
+    color: #292ba8;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-family: 'bold', sans-serif;
   }
-  
+  .datos-contacto i{
+    color: #292ba8;
+    font-family: 'bold', sans-serif;
+    font-size: 20px;
+  }
   .datos-contacto::before {
-    content: '✉️';
+    content: '  ';
     font-size: 18px;
     margin-right: 5px;
   }
@@ -626,18 +728,18 @@ body {
   .formulario-contacto input,
   .formulario-contacto textarea {
     padding: 15px;
-    border: 1px solid #C99767;
+    border: 1px solid #e37729;
     border-radius: 4px;
     font-size: 16px;
     background-color: transparent;
-    color: #B04A32;
+    color: #e37729;
     outline: none;
     font-family: 'Poppins', sans-serif;
   }
   
   .formulario-contacto input::placeholder,
   .formulario-contacto textarea::placeholder {
-    color: #C99767;
+    color: #e37729;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -651,7 +753,7 @@ body {
   .formulario-contacto button {
     width: 100%;
     padding: 14px;
-    background-color: #B04A32;
+    background-color: #e37729;
     color: #FFFFFF;
     border: none;
     border-radius: 20px;
@@ -663,7 +765,7 @@ body {
   
   .formulario-contacto button:hover {
     background-color: #C99767;
-    color: #000;
+    color: #fff;
   }
 
 /*FOOTER */
