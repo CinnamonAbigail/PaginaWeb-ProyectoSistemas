@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr Gos Jilani</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+<!--     <link rel="stylesheet" href="/carpetaCSS/tratados.css" />-->
+        <link rel="stylesheet" href="/carpetaCSS/index.css" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="barra-navegacion">
+            <ul class="navegacion-izquierda">
+                <li class="icono-contacto">
+                    <a href="#" id="abrirFormulario"><i class="fa fa-envelope"></i></a>
+                </li>
+                <li><a href="/carpetaHTML/index.html#inicio">INICIO</a></li>
+                <li><a href="/carpetaHTML/index.html#nosotros">NOSOTROS</a></li>
+                <li><a href="/carpetaHTML/index.html#huella">HUELLA</a></li>
+            </ul>
+            <div class="logo">
+                <img src="/img/logo-Photoroom.png" alt="Logo" />
+            </div>
+            <ul class="navegacion-derecha">
+                <li><a href="#reseñas">RESEÑAS</a></li>
+                <li><a href="#guerras">GUERRAS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+                <li class="icono-contacto">
+                    <a href="#" id="abrirTelefono" title="Llamar"><i class="fas fa-phone"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- carrusel de batallas -->
+    <section id="guerras" class="carrusel-guerras">
+        <div class="contenido-carrusel">
+            <div class="texto-guerras izquierda" id="texto-guerra">
+                <h2 class="titulo-guerra">Batalla de Tacna</h2>
+                <p class="descripcion-guerra">Conflicto entre Bolivia, Perú y Chile por el control del litoral y recursos minerales. Bolivia perdió su salida al mar tras la derrota.</p>
+                <p class="descripcion-guerra">1879/02/19 - 1883/10/20</p>
+                <button class="btn-vermas boton-izquierda">Ver batallas</button>
+                <button class="btn-vermas boton-izquierda">Ver tratados</button>
+            </div>
+    
+            <div class="imagenes-guerras">
+                <div class="imagen-item grande" id="imagen-grande">
+                <img src="/img/Krustytheclown.png" alt="Imagen grande">
+                </div>
+                <div class="imagen-item pequena" id="imagen-pequena">
+                <img src="/img/f1b2cd83-31b4-40df-8be3-ab295b07eb29.jpg" alt="Imagen pequeña">
+                </div>
+            </div>
+        </div>
+        <div class="flechas-navegacion">
+            <button class="flecha-izq">&#10094;</button>
+            <button class="flecha-der">&#10095;</button>
+        </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#inicio">inicio</a>
+            <a href="#autor">nosotros</a>
+            <a href="#libro">huella</a>
+            <a href="#testimonios">reseñas</a>
+            <a href="#firmas">guerras</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footer-copy">
+            Copyright © 2025 Todos los derechos reservados – Dr. Gos Jilani – Autor<br>
+            Desarrollado por SITE123 – Creador de sitios web
+        </p>
+    </footer>
+    
+    <script src="/carpetaJS/tratados.js"></script>
+
+<!-- Modal de mensaje -->
+<div id="modalMensaje" class="modal-mensaje">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2>Envíanos un mensaje</h2>
+        <form id="formularioMensaje">
+        <div class="input-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="input-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+        </div>
+        <div class="input-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+
+    <!-- aqui es  mensaje de Teléfono -->
+    <div id="modalTelefono" class="modal-telefono">
+        <div class="modal-contenido-telefono">
+            <button id="cerrarTelefono" class="cerrar-telefono">&times;</button>
+            <h2>Contáctanos</h2>
+            <p class="telefono-numero">+791 12345678</p>
+            <button class="boton-llamar">Llamar</button>
+        </div>
+    </div>
+
+    </body>

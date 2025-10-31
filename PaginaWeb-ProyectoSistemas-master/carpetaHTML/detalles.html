@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr Gos Jilani</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/carpetaCSS/detalles.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="barra-navegacion">
+            <ul class="navegacion-izquierda">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#autor">Nosotros</a></li>
+                <li><a href="#libro">Huella</a></li>
+            </ul>
+            <div class="logo">
+                <img src="./img/logo-Photoroom.png" alt="Logo" />
+            </div>
+            <ul class="navegacion-derecha">
+                <li><a href="#testimonios">Reseñas</a></li>
+                <li><a href="#firmas">Guerras</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li class="icono-contacto">
+                    <a href="#" id="abrirTelefono" title="Llamar"><i class="fas fa-phone"></i></a>
+                    <a href="#" id="abrirFormulario"><i class="fa fa-envelope"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<section class="guerra-detalle">
+  <div class="encabezado-guerra">
+    <h2 class="titulo-guerra">Batalla de Tacna</h2>
+    <p class="fechas-guerra">1880/05/26 – 1880/05/26</p>
+  </div>
+
+  <div class="fila-superior">
+    <div class="info-box"><span class="titulo-box">DESCRIPCIÓN</span></div>
+    <div class="info-box"><span class="titulo-box">CAUSAS</span></div>
+    <div class="info-box"><span class="titulo-box">CONSECUENCIAS</span></div>
+  </div>
+
+  <div class="fila-inferior">
+    <div class="info-box"><span class="titulo-box">UBICACIÓN</span></div>
+    <div class="info-box"><span class="titulo-box">BANDOS INVOLUCRADOS</span></div>
+  </div>
+
+  <div class="btn-container">
+    <a href="index.html" class="btn-atras" >volver</a>
+  </div>
+</section>
+
+            <footer class="footer">
+        <div class="footer-links">
+            <a href="#inicio">inicio</a>
+            <a href="#autor">nosotros</a>
+            <a href="#libro">huella</a>
+            <a href="#testimonios">reseñas</a>
+            <a href="#firmas">guerras</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footer-copy">
+            Copyright © 2025 Todos los derechos reservados – Dr. Gos Jilani – Autor<br>
+            Desarrollado por SITE123 – Creador de sitios web
+        </p>
+    </footer>
+        <script src="/carpetaJS/tratados.js"></script>
+
+<!-- Modal de mensaje -->
+<div id="modalMensaje" class="modal-mensaje">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <h2>Envíanos un mensaje</h2>
+    <form id="formularioMensaje">
+      <div class="input-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="input-group">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+      <div class="input-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+    <!-- aqui es  mensaje de Teléfono -->
+    <div id="modalTelefono" class="modal-telefono">
+        <div class="modal-contenido-telefono">
+            <button id="cerrarTelefono" class="cerrar-telefono">&times;</button>
+            <h2>Contáctanos</h2>
+            <p class="telefono-numero">+791 12345678</p>
+            <button class="boton-llamar">Llamar</button>
+        </div>
+    </div>
+
+    </body>
